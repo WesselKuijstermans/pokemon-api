@@ -8,7 +8,7 @@ export class TypesService {
   constructor(@InjectModel(Type.name) private typeModel: Model<TypeDocument>) {}
 
   async findAll(): Promise<Type[]> {
-    return this.typeModel.find().exec();
+    return await this.typeModel.find().exec();
   }
 
   async findOne(param: String): Promise<Type> {

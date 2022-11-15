@@ -8,7 +8,7 @@ export class TypesController {
 
   @Get()
   async findAll(): Promise<Type[]> {
-    return this.typesService.findAll();
+    return await this.typesService.findAll();
   }
 
   @Get(':id')
